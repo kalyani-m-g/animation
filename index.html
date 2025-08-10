@@ -1,85 +1,16 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>CSS Bounce Button</title>
-  <style>
-    :root{
-      --bg:#0f1724;
-      --btn:#06b6d4;
-      --btn-dark:#0b7280;
-      --text:#0b1220;
-    }
-
-    html,body{height:100%;margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;}
-    body{
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      background:linear-gradient(180deg,#081022 0%, #0f1724 100%);
-      color:#fff;
-    }
-
-    .card{
-      padding:36px;
-      border-radius:16px;
-      background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
-      box-shadow: 0 8px 30px rgba(2,6,23,0.6);
-      text-align:center;
-    }
-
-    .btn {
-      --pad:14px 26px;
-      display:inline-block;
-      background:var(--btn);
-      color:var(--text);
-      font-weight:700;
-      padding:var(--pad);
-      border-radius:12px;
-      border:0;
-      cursor:pointer;
-      transform-origin:center;
-      box-shadow: 0 8px 18px rgba(2,6,23,0.45);
-      transition: box-shadow .18s ease, transform .18s ease;
-      outline: none;
-      user-select:none;
-    }
-
-  
-    .btn:focus-visible{
-      box-shadow: 0 8px 22px rgba(2,6,23,0.6), 0 0 0 4px rgba(6,182,212,0.14);
-    }
-
-  
-    .btn:hover{
-      transform: translateY(-6px) scale(1.02);
-      box-shadow: 0 18px 30px rgba(2,6,23,0.6);
-    }
-
-   
-    .btn:hover,
-    .btn:focus{
-      animation: bounce 600ms cubic-bezier(.215,.61,.355,1) both;
-    }
-
-    @keyframes bounce {
-      0%   { transform: translateY(0) scale(1); }
-      30%  { transform: translateY(-18px) scale(1.03); }
-      50%  { transform: translateY(-8px) scale(1.01); }
-      65%  { transform: translateY(-12px) scale(1.02); }
-      100% { transform: translateY(-6px)  scale(1.02); }
-    }
-
-   
-    p { margin: 14px 0 0; font-size:14px; color: #cbd5e1; opacity:.9;}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation Example</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="card">
-    <button class="btn" id="demoBtn">Bounce me — hover or focus</button>
-    <p>Pure CSS animation (@keyframes). Works on hover and keyboard focus.</p>
-  </div>
+
+    <div class="container">
+        <button class="bounce-btn">Hover Me!</button>
+    </div>
+
 </body>
 </html>
-
